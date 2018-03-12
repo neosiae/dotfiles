@@ -27,8 +27,8 @@ set laststatus=2                          " Show status line
 " Turn off Swap files
 " ===================
 set noswapfile                            " Disable .swp files
-set nobackup				                      " Disable backup files
-set nowritebackup 			                  " Nope
+set nobackup                              " Disable backup files
+set nowritebackup                         " Nope
 set backupdir=~/vimtmp,.                  " Write backup here
 set directory=~/vimtmp,.                  " Or here
 
