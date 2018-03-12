@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'sheerun/vim-polyglot'             " More syntax highlighting
   Plug 'scrooloose/nerdtree'              " File system explorer
   Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
+  Plug 'vim-airline/vim-airline'          " Status bar
+  Plug 'vim-airline/vim-airline-themes'   " Status bar themes
 call plug#end()                           " Initialize plugin system
   
 " Color scheme
@@ -47,3 +49,8 @@ set colorcolumn=80                        " Show a marker at 80 chars
 " NERDTree
 " ========
 map <C-n> :NERDTreeToggle<CR>
+
+" Airline
+" =======
+let g:airline_theme='solarized'
+let g:airline_section_b = '%{strftime("%c")}'
