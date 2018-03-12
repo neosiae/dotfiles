@@ -1,0 +1,48 @@
+" Display Settings
+" ================
+set encoding=utf8                         " UTF8
+set t_Co=256                              " Enable 256 colors
+syntax enable                             " Syntax highlighting on
+
+call plug#begin('~/.vim/plugged')
+  Plug 'lifepillar/vim-solarized8'        " Colorscheme
+  Plug 'sheerun/vim-polyglot'             " More syntax highlighting
+  Plug 'scrooloose/nerdtree'              " File system explorer
+call plug#end()                           " Initialize plugin system
+  
+" Color scheme
+" ============
+set background=light
+let g:solarized_use16 = 1                 " Set 16 ANSI colors
+colorscheme solarized8                    " Set color scheme
+
+" General config
+" ==============
+set number                                " Line numbers
+set backspace=indent,eol,start            " Allow backspace
+set showcmd                               " Show cmd 
+set showmode                              " Show current mode
+set laststatus=2                          " Show status line
+
+" Turn off Swap files
+" ===================
+set noswapfile                            " Disable .swp files
+set nobackup				                      " Disable backup files
+set nowritebackup 			                  " Nope
+set backupdir=~/vimtmp,.                  " Write backup here
+set directory=~/vimtmp,.                  " Or here
+
+" Indentation and display
+" =======================
+filetype plugin on                        " Filetype detection
+filetype indent on                        " Enable loading the indent file 
+set autoindent                            " Automatic indentation
+set tabstop=2                             " Control the number of spaces
+set shiftwidth=2                          " Number of spaces for indentation
+set expandtab                             " Insert spaces when tab is pressed
+set softtabstop=2                         " Treat the spaces like a tab
+set colorcolumn=80                        " Show a marker at 80 chars
+
+" NERDTree
+" ========
+map <C-n> :NERDTreeToggle<CR>
