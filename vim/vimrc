@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'lifepillar/vim-solarized8'        " Colorscheme
   Plug 'sheerun/vim-polyglot'             " More syntax highlighting
   Plug 'scrooloose/nerdtree'              " File system explorer
+  Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
 call plug#end()                           " Initialize plugin system
   
 " Color scheme
