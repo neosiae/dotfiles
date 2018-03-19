@@ -54,6 +54,10 @@ map <C-n> :NERDTreeToggle<CR>
 " =======
 let g:airline_theme='solarized'
 
+" Fuzzy file search
+" =================
+let g:ctrlp_custom_ignore = 'node_modules'
+
 " Habit breaking, habit making
 " ============================
 noremap <Up> <NOP>
