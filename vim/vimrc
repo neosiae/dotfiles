@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'sheerun/vim-polyglot'             " More syntax highlighting
   Plug 'scrooloose/nerdtree'              " File system explorer
   Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
+  Plug 'w0rp/ale'                         " Async lint engine
+  Plug 'skywind3000/asyncrun.vim'         " Async shell commands
   Plug 'vim-airline/vim-airline'          " Status bar
   Plug 'vim-airline/vim-airline-themes'   " Status bar themes
 call plug#end()                           " Initialize plugin system
@@ -26,6 +28,7 @@ set backspace=indent,eol,start            " Allow backspace
 set showcmd                               " Show cmd 
 set showmode                              " Show current mode
 set laststatus=2                          " Show status line
+set autoread                              " Auto refresh any files that haven't been edited by Vim
 
 " Turn off Swap files
 " ===================
@@ -57,6 +60,14 @@ let g:airline_theme='solarized'
 " Fuzzy file search
 " =================
 let g:ctrlp_custom_ignore = 'node_modules'
+
+" Ale
+" ===
+let g:ale_sign_error = '•'               " Less aggressive
+
+" Autoformatting
+" ==============
+autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
 
 " Habit breaking, habit making
 " ============================
