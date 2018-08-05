@@ -3,8 +3,8 @@
 url="https://developer.mozilla.org/en-US/search?q="
 
 if [ "$1" = "" ] ; then
-  echo 'Usage: mdn <term>'
+  echo 'Usage: mdn <term1> <term2>'
   exit 1
 fi
 
-xdg-open $url$1 > /dev/null 2>&1 &
+xdg-open $url"$1 $2" > /dev/null 2>&1 &
