@@ -1,11 +1,5 @@
-" Display Settings
-" ================
-set encoding=utf8                         " UTF8
-set t_Co=256                              " Enable 256 colors
-syntax enable                             " Syntax highlighting on
-
 call plug#begin('~/.vim/plugged')
-  Plug 'lifepillar/vim-solarized8'        " Colorscheme
+  Plug 'chriskempson/base16-vim'          " Color scheme
   Plug 'sheerun/vim-polyglot'             " More syntax highlighting
   Plug 'scrooloose/nerdtree'              " File system explorer
   Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
@@ -14,12 +8,16 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline'          " Status bar
   Plug 'vim-airline/vim-airline-themes'   " Status bar themes
 call plug#end()                           " Initialize plugin system
+
+" Display Settings
+" ================
+set encoding=utf8                         " UTF8
+set t_Co=256                              " Enable 256 colors
+syntax enable                             " Syntax highlighting on
   
 " Color scheme
 " ============
-set background=light
-let g:solarized_use16 = 1                 " Set 16 ANSI colors
-colorscheme solarized8                    " Set color scheme
+colorscheme base16-eighties
 
 " General config
 " ==============
@@ -53,17 +51,18 @@ set colorcolumn=80                        " Show a marker at 80 chars
 " ========
 map <C-n> :NERDTreeToggle<CR>
 
-" Airline
-" =======
-let g:airline_theme='solarized'
-
 " Fuzzy file search
 " =================
 let g:ctrlp_custom_ignore = 'node_modules'
 
 " Ale
 " ===
-let g:ale_sign_error = '•'               " Less aggressive
+let g:ale_sign_error = '•'                " Less aggressive
+
+" Airline
+" =======
+let g:airline_powerline_fonts = 0
+let g:airline_theme ='base16_eighties'
 
 " Autoformatting
 " ==============
