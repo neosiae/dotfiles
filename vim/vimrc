@@ -7,6 +7,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'skywind3000/asyncrun.vim'         " Async shell commands
   Plug 'vim-airline/vim-airline'          " Status bar
   Plug 'vim-airline/vim-airline-themes'   " Status bar themes
+  Plug 'tpope/vim-commentary'             " Comment stuff out
+  Plug 'tpope/vim-surround'               " Manipulate various surroundings
+  Plug 'Raimondi/delimitMate'             " Autocomplete quotes, brackets etc.
 call plug#end()                           " Initialize plugin system
 
 " Display Settings
