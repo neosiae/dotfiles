@@ -65,7 +65,7 @@ let g:ale_sign_error = '•'                " Less aggressive
 " Airline
 " =======
 let g:airline_powerline_fonts = 0
-let g:airline_theme ='base16_eighties'
+let g:airline_theme ='base16_default'
 
 " Autoformatting
 " ==============
