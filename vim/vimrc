@@ -30,6 +30,7 @@ set showcmd                               " Show cmd
 set showmode                              " Show current mode
 set laststatus=2                          " Show status line
 set autoread                              " Auto refresh any files that haven't been edited by Vim
+set clipboard^=unnamed,unnamedplus
 
 " Turn off Swap files
 " ===================
@@ -59,8 +60,12 @@ map <C-n> :NERDTreeToggle<CR>
 let g:ctrlp_custom_ignore = 'node_modules'
 
 " Ale
-" ===
+" === 
 let g:ale_sign_error = '•'                " Less aggressive
+let g:ale_set_highlights = 0              " Disable highlights
+let g:ale_linters = {
+\  'javascript': ['standard'],
+\}
 
 " Airline
 " =======
@@ -69,7 +74,7 @@ let g:airline_theme ='base16_default'
 
 " Autoformatting
 " ==============
-autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
+autocmd BufWritePost *.js AsyncRun -post=checktime npx standard --fix %
 
 " Habit breaking, habit making
 " ============================
