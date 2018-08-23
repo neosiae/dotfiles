@@ -2,7 +2,7 @@ function fish_prompt -d "Write out the prompt"
   set_color blue 
   printf '\n[%s]' (basename $PWD)
 
-  set_color magenta 
+  set_color red 
   printf ' %s' (git_branch_name)
   
   set_color $fish_color_cwd 
