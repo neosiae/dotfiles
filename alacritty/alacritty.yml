@@ -338,7 +338,7 @@ key_bindings:
   - { key: F8,                      chars: "\x1b[19~"                    }
   - { key: F9,                      chars: "\x1b[20~"                    }
   - { key: F10,                     chars: "\x1b[21~"                    }
-  - { key: F11,                     chars: "\x1b[23~"                    }
+  - { key: F11,                     command: { program: "fullscreen" }   }
   - { key: F12,                     chars: "\x1b[24~"                    }
   - { key: F1,       mods: Shift,   chars: "\x1b[1;2P"                   }
   - { key: F2,       mods: Shift,   chars: "\x1b[1;2Q"                   }
@@ -386,5 +386,5 @@ key_bindings:
   - { key: F8,       mods: Super,   chars: "\x1b[19;3~"                  }
   - { key: F9,       mods: Super,   chars: "\x1b[20;3~"                  }
   - { key: F10,      mods: Super,   chars: "\x1b[21;3~"                  }
-  - { key: F11,      mods: Super,   command: { program: "fullscreen" }   }
+  - { key: F11,      mods: Super,   chars: "\x1b[23;3~"                  }
   - { key: F12,      mods: Super,   chars: "\x1b[24;3~"                  }
