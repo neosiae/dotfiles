@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
   Plug 'chriskempson/base16-vim'          " Color scheme
   Plug 'sheerun/vim-polyglot'             " More syntax highlighting
-  Plug 'scrooloose/nerdtree'              " File system explorer
   Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
   Plug 'w0rp/ale'                         " Async lint engine
   Plug 'skywind3000/asyncrun.vim'         " Async shell commands
@@ -51,11 +50,7 @@ set expandtab                             " Insert spaces when tab is pressed
 set softtabstop=2                         " Treat the spaces like a tab
 set colorcolumn=80                        " Show a marker at 80 chars
 
-" NERDTree
-" ========
-map <C-n> :NERDTreeToggle<CR>
-
-" Fuzzy file search
+" CtrlP 
 " =================
 let g:ctrlp_custom_ignore = 'node_modules'
 
