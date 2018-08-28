@@ -56,6 +56,8 @@ let g:ctrlp_custom_ignore = 'node_modules'
 
 " Ale
 " === 
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ale_sign_error = '•'                " Less aggressive
 let g:ale_set_highlights = 0              " Disable highlights
 let g:ale_linters = {
@@ -66,6 +68,7 @@ let g:ale_linters = {
 " =======
 let g:airline_powerline_fonts = 0
 let g:airline_theme ='base16_eighties'
+let g:airline#extensions#ale#enabled = 1
 
 " Autoformatting
 " ==============
