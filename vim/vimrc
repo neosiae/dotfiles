@@ -67,7 +67,7 @@ let g:ale_linters = {
 " Airline
 " =======
 let g:airline_powerline_fonts = 0
-let g:airline_theme ='base16_eighties'
+let g:airline_theme ='base16_default'
 let g:airline#extensions#ale#enabled = 1
 
 " Autoformatting
