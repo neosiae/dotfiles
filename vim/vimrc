@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-  Plug 'chriskempson/base16-vim'          " Color scheme
+  Plug 'arcticicestudio/nord-vim'         " Color scheme
   Plug 'sheerun/vim-polyglot'             " More syntax highlighting
   Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
   Plug 'w0rp/ale'                         " Async lint engine
@@ -19,7 +19,7 @@ syntax enable                             " Syntax highlighting on
   
 " Color scheme
 " ============
-colorscheme base16-eighties
+colorscheme nord
 
 " General config
 " ==============
@@ -67,7 +67,6 @@ let g:ale_linters = {
 " Airline
 " =======
 let g:airline_powerline_fonts = 0
-let g:airline_theme ='base16_default'
 let g:airline#extensions#ale#enabled = 1
 
 " Autoformatting
