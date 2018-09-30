@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-  Plug 'arcticicestudio/nord-vim'         " Color scheme
+  Plug 'morhetz/gruvbox'                  " Color scheme
   Plug 'sheerun/vim-polyglot'             " More syntax highlighting
   Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
   Plug 'w0rp/ale'                         " Async lint engine
@@ -19,7 +19,9 @@ syntax enable                             " Syntax highlighting on
   
 " Color scheme
 " ============
-colorscheme nord
+let g:gruvbox_bold = '0'
+colorscheme gruvbox
+set background=dark
 
 " General config
 " ==============
@@ -68,6 +70,7 @@ let g:ale_linters = {
 " =======
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#ale#enabled = 1
+"let g:airline_theme='base16_oceanicnext'
 
 " Autoformatting
 " ==============
