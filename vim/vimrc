@@ -70,7 +70,6 @@ let g:ale_linters = {
 " =======
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#ale#enabled = 1
-"let g:airline_theme='base16_oceanicnext'
 
 " Autoformatting
 " ==============
