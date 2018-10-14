@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-  Plug 'morhetz/gruvbox'                  " Color scheme
+  Plug 'chriskempson/base16-vim'          " Color scheme
   Plug 'sheerun/vim-polyglot'             " More syntax highlighting
   Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
   Plug 'w0rp/ale'                         " Async lint engine
@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-commentary'             " Comment stuff out
   Plug 'tpope/vim-surround'               " Manipulate various surroundings
   Plug 'Raimondi/delimitMate'             " Autocomplete quotes, brackets etc.
+  Plug 'scrooloose/nerdtree'              " Tree explorer
 call plug#end()                           " Initialize plugin system
 
 " Display Settings
@@ -20,8 +21,8 @@ syntax enable                             " Syntax highlighting on
 " Color scheme
 " ============
 let g:gruvbox_bold = '0'
-colorscheme gruvbox
-set background=dark
+colorscheme base16-grayscale-dark
+" set background=dark
 
 " General config
 " ==============
@@ -53,8 +54,12 @@ set softtabstop=2                         " Treat the spaces like a tab
 set colorcolumn=80                        " Show a marker at 80 chars
 
 " CtrlP 
-" =================
+" =====
 let g:ctrlp_custom_ignore = 'node_modules'
+
+" NERDTree
+" ========
+map <C-n> :NERDTreeToggle<CR>
 
 " Ale
 " === 
