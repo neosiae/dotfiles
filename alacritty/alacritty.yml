@@ -111,36 +111,40 @@ render_timer: false
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: false
 
-# Colors (Gruvbox dark)
+# Base16 Grayscale Light - alacritty color config
+# Alexandre Gavioli (https://github.com/Alexx2/)
 colors:
   # Default colors
   primary:
-    # hard contrast: background = '0x1d2021'
-    background: '0x282828'
-    # soft contrast: background = '0x32302f'
-    foreground: '0xebdbb2'
+    background: '0xf7f7f7'
+    foreground: '0x464646'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0xf7f7f7'
+    cursor: '0x464646'
 
   # Normal colors
   normal:
-    black:   '0x282828'
-    red:     '0xcc241d'
-    green:   '0x98971a'
-    yellow:  '0xd79921'
-    blue:    '0x458588'
-    magenta: '0xb16286'
-    cyan:    '0x689d6a'
-    white:   '0xa89984'
+    black:   '0xf7f7f7'
+    red:     '0x7c7c7c'
+    green:   '0x8e8e8e'
+    yellow:  '0xa0a0a0'
+    blue:    '0x686868'
+    magenta: '0x747474'
+    cyan:    '0x868686'
+    white:   '0x464646'
 
   # Bright colors
   bright:
-    black:   '0x928374'
-    red:     '0xfb4934'
-    green:   '0xb8bb26'
-    yellow:  '0xfabd2f'
-    blue:    '0x83a598'
-    magenta: '0xd3869b'
-    cyan:    '0x8ec07c'
-    white:   '0xebdbb2'
+    black:   '0xababab'
+    red:     '0x999999'
+    green:   '0xe3e3e3'
+    yellow:  '0xb9b9b9'
+    blue:    '0x525252'
+    magenta: '0x252525'
+    cyan:    '0x5e5e5e'
+    white:   '0x464646'
 
 # Visual Bell
 #
