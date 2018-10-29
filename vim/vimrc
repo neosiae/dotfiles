@@ -32,6 +32,7 @@ highlight Normal ctermbg=black ctermfg=white
 colorscheme night-owl 
 syntax enable                             " Syntax highlighting on
 highlight ColorColumn guibg=#282C34
+highlight MatchParen guifg=#d6deeb guibg=#c792ea
 
 " General config
 " ==============
