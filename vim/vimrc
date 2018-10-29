@@ -1,9 +1,8 @@
 call plug#begin('~/.vim/plugged')
-  Plug 'chriskempson/base16-vim'          " Color scheme
+  Plug 'haishanh/night-owl.vim'           " Color scheme
   Plug 'sheerun/vim-polyglot'             " More syntax highlighting
   Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
   Plug 'w0rp/ale'                         " Async lint engine
-  Plug 'skywind3000/asyncrun.vim'         " Async shell commands
   Plug 'vim-airline/vim-airline'          " Status bar
   Plug 'vim-airline/vim-airline-themes'   " Status bar themes
   Plug 'tpope/vim-commentary'             " Comment stuff out
@@ -14,18 +13,29 @@ call plug#end()                           " Initialize plugin system
 
 " Display Settings
 " ================
-set encoding=utf8                         " UTF8
-set t_Co=256                              " Enable 256 colors
-syntax enable                             " Syntax highlighting on
-  
+
+" 24-bit color
+" ============
+if &term =~# '^screen'
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
+if (has('termguicolors'))
+  set termguicolors
+endif
+
+highlight Normal ctermbg=black ctermfg=white
+
 " Color scheme
 " ============
-let g:gruvbox_bold = '0'
-colorscheme base16-grayscale-dark
-" set background=dark
+colorscheme night-owl 
+syntax enable                             " Syntax highlighting on
+highlight ColorColumn guibg=#282C34
 
 " General config
 " ==============
+set encoding=utf8                         " UTF8
 set number                                " Line numbers
 set backspace=indent,eol,start            " Allow backspace
 set showcmd                               " Show cmd 
@@ -66,20 +76,22 @@ map <C-n> :NERDTreeToggle<CR>
 " === 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-let g:ale_sign_error = '•'                " Less aggressive
-let g:ale_set_highlights = 0              " Disable highlights
+
+let g:ale_lint_on_save = 'never'          " Run lint only when files are saved 
+let g:ale_fix_on_save = 1                 " Auto fix 
+let g:ale_change_sign_column_color = 1 
+let g:ale_fixers = {'javascript': ['standard']}
 let g:ale_linters = {
 \  'javascript': ['standard'],
 \}
 
+highlight ALESignColumnWithErrors ctermbg=black
+
 " Airline
 " =======
+let g:airline_theme='night_owl'
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#ale#enabled = 1
-
-" Autoformatting
-" ==============
-autocmd BufWritePost *.js AsyncRun -post=checktime npx standard --fix %
 
 " Habit breaking, habit making
 " ============================
