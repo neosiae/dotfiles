@@ -81,9 +81,9 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ale_lint_on_save = 'never'          " Run lint only when files are saved 
 let g:ale_fix_on_save = 1                 " Auto fix 
 let g:ale_change_sign_column_color = 1 
-let g:ale_fixers = {'javascript': ['standard']}
+let g:ale_fixers = {'javascript': ['standard', 'eslint']}
 let g:ale_linters = {
-\  'javascript': ['standard'],
+\  'javascript': ['standard', 'eslint'],
 \}
 
 highlight ALESignColumnWithErrors ctermbg=black
