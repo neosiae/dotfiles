@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'               " Manipulate various surroundings
   Plug 'Raimondi/delimitMate'             " Autocomplete quotes, brackets etc.
   Plug 'scrooloose/nerdtree'              " Tree explorer
+  Plug 'LucHermitte/lh-vim-lib'           " Vim functions 
   Plug 'LucHermitte/local_vimrc'          " Project management 
 call plug#end()                           " Initialize plugin system
 
