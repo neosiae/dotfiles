@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'               " Manipulate various surroundings
   Plug 'Raimondi/delimitMate'             " Autocomplete quotes, brackets etc.
   Plug 'scrooloose/nerdtree'              " Tree explorer
+  Plug 'LucHermitte/local_vimrc'          " Project management 
 call plug#end()                           " Initialize plugin system
 
 " Display Settings
@@ -52,8 +53,7 @@ set noswapfile                            " Disable .swp files
 set nobackup                              " Disable backup files
 set nowritebackup                         " Nope
 set backupdir=~/vimtmp,.                  " Write backup here
-set directory=~/vimtmp,.                  " Or here
-
+set directory=~/vimtmp,.                  " Or here 
 " Indentation and display
 " =======================
 filetype plugin on                        " Filetype detection
@@ -81,10 +81,12 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ale_lint_on_save = 'never'          " Run lint only when files are saved 
 let g:ale_fix_on_save = 1                 " Auto fix 
 let g:ale_change_sign_column_color = 1 
-let g:ale_fixers = {'javascript': ['standard', 'eslint']}
 let g:ale_linters = {
-\  'javascript': ['standard', 'eslint'],
-\}
+\ 'javascript': ['standard'],
+\ }
+let g:ale_fixers = {
+\ 'javascript': ['standard'],
+\ }
 
 highlight ALESignColumnWithErrors ctermbg=black
 
