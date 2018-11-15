@@ -56,6 +56,7 @@ set nobackup                              " Disable backup files
 set nowritebackup                         " Nope
 set backupdir=~/vimtmp,.                  " Write backup here
 set directory=~/vimtmp,.                  " Or here 
+
 " Indentation and display
 " =======================
 filetype plugin on                        " Filetype detection
