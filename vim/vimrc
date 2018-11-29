@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-  Plug 'haishanh/night-owl.vim'           " Color scheme
+  Plug 'chriskempson/base16-vim'          " Color scheme
   Plug 'sheerun/vim-polyglot'             " More syntax highlighting
   Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
   Plug 'w0rp/ale'                         " Async lint engine
@@ -15,26 +15,14 @@ call plug#end()                           " Initialize plugin system
 
 " Display Settings
 " ================
-
-" 24-bit color
-" ============
-if &term =~# '^screen'
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
-
 if (has('termguicolors'))
   set termguicolors
 endif
 
-highlight Normal ctermbg=black ctermfg=white
-
 " Color scheme
 " ============
-colorscheme night-owl 
+colorscheme base16-eighties 
 syntax enable                             " Syntax highlighting on
-highlight ColorColumn guibg=#282C34
-highlight MatchParen guifg=#d6deeb guibg=#c792ea
 
 " General config
 " ==============
@@ -91,11 +79,9 @@ let g:ale_fixers = {
 \ 'javascript': ['standard'],
 \ }
 
-highlight ALESignColumnWithErrors ctermbg=black
-
 " Airline
 " =======
-let g:airline_theme='night_owl'
+let g:airline_theme='base16_eighties'
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#ale#enabled = 1
 
