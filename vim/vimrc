@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline-themes'   " Status bar themes
   Plug 'tpope/vim-commentary'             " Comment stuff out
   Plug 'tpope/vim-surround'               " Manipulate various surroundings
+  Plug 'tpope/vim-fugitive'               " Git wrapper
   Plug 'Raimondi/delimitMate'             " Autocomplete quotes, brackets etc.
   Plug 'scrooloose/nerdtree'              " Tree explorer
   Plug 'LucHermitte/lh-vim-lib'           " Vim functions 
@@ -27,7 +28,7 @@ syntax enable                             " Syntax highlighting on
 " General config
 " ==============
 set encoding=utf8                         " UTF8
-set number                                " Line numbers
+set number relativenumber                 " Line numbers
 set backspace=indent,eol,start            " Allow backspace
 set showcmd                               " Show cmd 
 set showmode                              " Show current mode
@@ -55,6 +56,11 @@ set shiftwidth=2                          " Number of spaces for indentation
 set expandtab                             " Insert spaces when tab is pressed
 set softtabstop=2                         " Treat the spaces like a tab
 set colorcolumn=80                        " Show a marker at 80 chars
+
+" Autocompletion
+" ==============
+set wildmenu
+set wildmode=list:longest,full
 
 " CtrlP 
 " =====
