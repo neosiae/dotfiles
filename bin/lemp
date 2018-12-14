@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if [ "$1" = "start" ] ; then
+  sudo systemctl start nginx.service
+  echo 'Starting Nginx...'
+  sudo systemctl start mariadb.service
+  echo 'Starting MariaDB...'
+  sudo systemctl start php-fpm.service
+  echo 'Starting PHP-FPM'
+fi
+
+if [ "$1" = "stop" ] ; then
+  sudo systemctl stop nginx.service
+  echo 'Stopping Nginx...'
+  sudo systemctl stop mariadb.service
+  echo 'Stopping MariaDB...'
+  sudo systemctl stop php-fpm.service
+  echo 'Stopping PHP-FPM...'
+fi

@@ -1,0 +1,74 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;==========================================================
+
+[bar/top]
+background = ${xrdb:color0}
+border-bottom-size = 1 
+border-bottom-color = ${xrdb:color11}
+font-0 = "Noto Sans Mono:size=12:weight=normal;2"
+padding = 1 
+module-margin = 1
+separator = |
+modules-left = ewmh
+modules-center = date
+modules-right = cpu memory temperature network updates
+tray-position = right 
+
+[module/date]
+type = internal/date
+interval = 1.0
+time = %H:%M
+date = %d-%m-%Y
+time-alt = %d-%m-%Y
+date-alt = %H:%M
+label = %time%
+
+[module/ewmh]
+type = internal/xworkspaces
+pin-workspaces = true
+enable-click = false
+enable-scroll = false
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+label = C %percentage%%
+
+[module/memory]
+type = internal/memory
+label = M %percentage_used%%
+
+[module/temperature]
+type = internal/temperature
+interval = 0.5
+hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon0/temp1_input
+label = T %temperature-c%
+
+[module/network]
+type = internal/network
+interface = enp2s0
+label-connected = ON
+label-disconnected = OFF
+format-connected = N <label-connected>
+format-disconnected = N <label-disconnected>
+interval = 3.0
+
+[module/updates]
+type = custom/script
+exec = ~/.config/polybar/scripts/updates.sh
+interval = 3600

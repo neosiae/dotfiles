@@ -1,0 +1,8 @@
+[user]
+	email = neosiae@gmail.com
+	name = Denis Kotlica
+	signingkey =
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg

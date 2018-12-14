@@ -1,0 +1,2 @@
+# Execute commands at the beginning of the X user session
+xset -b

@@ -1,0 +1,11 @@
+[Unit]
+Description=Telegram Messenger
+After=graphical.target
+
+[Service]
+Type=simple
+Environment=DISPLAY=:0
+ExecStart=/home/neosiae/bin/telegram-desktop -startintray
+
+[Install]
+WantedBy=multi-user.target
