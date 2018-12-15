@@ -14,7 +14,7 @@ function linkFile() {
     $3 rm "$2/$filename"
     $3 ln -sv $1 $2 
   else
-    $3 ln -sv $3 $1 $2 
+    $3 ln -sv $1 $2 
   fi
 }
 
