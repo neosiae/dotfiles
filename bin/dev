@@ -4,6 +4,6 @@
   tmux new-session -d -s dev
   tmux split-window -h
   tmux split-window -v
+  tmux resize-pane -R 4 
   tmux attach-session -t dev
 }
-
