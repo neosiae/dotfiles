@@ -37,6 +37,8 @@ set laststatus=2                          " Show status line
 set autoread                              " Auto refresh any files that haven't been edited by Vim
 set clipboard^=unnamed,unnamedplus        " Enable clipboard
 set mouse=a                               " Enable mouse 
+set hlsearch                              " Highlight search 
+set incsearch                             " Auto search
 au FocusGained * :checktime               " Automatically reload files 
 
 " Turn off Swap files
