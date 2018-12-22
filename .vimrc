@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'LucHermitte/lh-vim-lib'           " Vim functions 
   Plug 'LucHermitte/local_vimrc'          " Project management 
   Plug 'rust-lang/rust.vim'               " Rust
+  Plug 'Valloric/YouCompleteMe'           " Completion engine 
 call plug#end()                           " Initialize plugin system
 
 " Display Settings
@@ -93,6 +94,10 @@ let g:ale_fixers = {
 let g:airline_theme='base16_eighties'
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#ale#enabled = 1
+
+" YouCompleteMe
+" =============
+let g:ycm_autoclose_preview_window_after_completion=1
 
 " Habit breaking, habit making
 " ============================
