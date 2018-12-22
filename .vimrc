@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree'              " Tree explorer
   Plug 'LucHermitte/lh-vim-lib'           " Vim functions 
   Plug 'LucHermitte/local_vimrc'          " Project management 
+  Plug 'rust-lang/rust.vim'               " Rust
 call plug#end()                           " Initialize plugin system
 
 " Display Settings
