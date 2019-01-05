@@ -165,7 +165,7 @@ colors:
     blue:    '0x0087af'
     magenta: '0x005f87'
     cyan:    '0x005f87'
-    white: '0x444444'
+    white:   '0x444444'
 
   # Indexed Colors
   #
