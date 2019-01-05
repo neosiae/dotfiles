@@ -18,8 +18,6 @@
 
 [bar/top]
 background = ${xrdb:color0}
-border-bottom-size = 1 
-border-bottom-color = ${xrdb:color11}
 font-0 = "Noto Sans Mono:size=12:weight=normal;2"
 padding = 1 
 module-margin = 1

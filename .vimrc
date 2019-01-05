@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-  Plug 'chriskempson/base16-vim'          " Color scheme
+  Plug 'NLKNguyen/papercolor-theme'       " Color scheme
   Plug 'sheerun/vim-polyglot'             " More syntax highlighting
   Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy file search
   Plug 'w0rp/ale'                         " Async lint engine
@@ -24,8 +24,16 @@ endif
 
 " Color scheme
 " ============
-colorscheme base16-eighties 
 syntax enable                             " Syntax highlighting on
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default.light': {
+  \       'allow_bold': 0
+  \     }
+  \   }
+  \ }
+colorscheme PaperColor 
+set background=light
 
 " General config
 " ==============
@@ -91,8 +99,6 @@ let g:ale_fixers = {
 
 " Airline
 " =======
-let g:airline_theme='base16_eighties'
-let g:airline_powerline_fonts = 0
 let g:airline#extensions#ale#enabled = 1
 
 " YouCompleteMe
